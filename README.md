@@ -1,0 +1,1 @@
+# MAN_STORE_JS
