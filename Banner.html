@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="Banner.css">
+  <title>Banner</title>
+  <style>
+    button {
+      float: right;
+    }
+  </style>
+  <script>
+    let i = 0;
+    var arr = new Array();
+    function load() {
+      arr = new Array("banner0.jpg", "banner1.jpg", "banner2.jpg");
+    }
+    function back() {
+      if (i > 0) {
+        i--;
+      }
+      else {
+        i = 2;
+      }
+      document.getElementById("banner").src = "./img/" + arr[i];
+    }
+    function next() {
+      if (i < 2){
+        i++;
+      }
+      else {
+        i = 0;
+      }
+      document.getElementById("banner").src = './img/banner' + i + '.jpg'
+    }
+  </script>
+</head>
+
+<body onload="load();">
+  <img width="1246" height="380" src="./img/banner0.jpg" id="banner" alt="" />
+  <button type="button" onclick="next();">Next</button>
+  <button type="button" onclick="back();">Back</button>
+</body>
+
+</html>
